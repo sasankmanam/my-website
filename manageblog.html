@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Blog | My Personal Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="page-hero"><p class="eyebrow">YOUR LITTLE CORNER OF THE INTERNET</p><h1>Manage Blog Posts</h1><p>Add, read, edit, and delete sample blog posts.</p></header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a><a href="aboutus.html">About Me</a><a class="active" href="manageblog.html">Manage Blog</a><a href="analytics.html">Analytics</a>
+  </nav>
+  <main class="container">
+    <section class="form-card">
+      <div class="section-heading"><div><p class="eyebrow">CRUD DEMO</p><h2 id="formTitle">Create a post</h2></div><span class="pill">DEMO MODE</span></div>
+      <p class="muted">This page demonstrates create, read, update, and delete actions using your browser's local storage. It is a class-project demo, not a live publishing system.</p>
+      <form id="postForm">
+        <input type="hidden" id="postId">
+        <div class="form-grid">
+          <label>Post title<input id="postTitle" name="title" type="text" placeholder="e.g., A weekend by the coast" required maxlength="90"></label>
+          <label>Category<select id="postCategory" name="category"><option>Everyday Life</option><option>Travel & Places</option><option>Personal Growth</option><option>Food & Cafes</option><option>Learning</option></select></label>
+        </div>
+        <label>Post content<textarea id="postContent" name="content" rows="5" placeholder="Write a few sentences about your story..." required maxlength="1200"></textarea></label>
+        <div class="form-actions"><button class="button button-primary" type="submit" id="saveButton">Add post</button><button class="button button-light" type="button" id="cancelEdit" hidden>Cancel edit</button></div>
+      </form>
+    </section>
+    <section class="manage-list">
+      <div class="section-heading"><div><p class="eyebrow">YOUR COLLECTION</p><h2>Saved posts</h2></div><span id="postCount" class="count-badge">0 posts</span></div>
+      <div id="postList" class="saved-posts" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p>© 2026 My Personal Blog <span>Posts are stored in this browser for demonstration.</span></p></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
